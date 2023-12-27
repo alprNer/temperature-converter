@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Temperature Converter</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+
+  </body>
+   <body>
+    <div class="navigation">
+      <ul>
+        
+        <li class="list active">
+          <a href="#">
+            <span class="icon"></span>
+              <ion-icon name="finger-print-outline"></ion-icon>
+            <span class="text">Alperen ER</span>
+          </a>
+        </li>
+        
+        <li class="list">
+          <a href="https://github.com/alprNer">
+            <span class="icon"></span>
+              <ion-icon name="logo-github"></ion-icon>
+            <span class="text">GitHub</span>
+          </a>
+        </li>
+        <li class="list">
+          <a href="https://www.linkedin.com/in/muhammetalperener/">
+            <span class="icon"></span>
+              <ion-icon name="logo-linkedin"></ion-icon>
+            <span class="text">Linked-in</span>
+          </a>
+        </li>
+        
+      </ul>
+      <div class="indicator"></div>
+    </div>
+    
+    <script>
+        const list = document.querySelectorAll('.list');
+        function activeLink() {
+            list.forEach((item) =>
+            item.classList.remove('active'));
+            item.classList.add('active');
+        }
+        list.forEach((item) => 
+        item.addEventListener('click', activeLink)); 
+      
+list.forEach((item) => 
+item.addEventListener('click', () => activeLink(item))); // fonksiyon çağrısına item parametresini ekleyin
+
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+
+  </body>
+</body>
+</html>
