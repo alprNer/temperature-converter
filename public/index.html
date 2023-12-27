@@ -22,47 +22,42 @@
    <body>
     <div class="navigation">
       <ul>
-        
         <li class="list active">
           <a href="#">
             <span class="icon"></span>
-              <ion-icon name="finger-print-outline"></ion-icon>
+            <ion-icon name="finger-print-outline"></ion-icon>
             <span class="text">Alperen ER</span>
           </a>
         </li>
-        
         <li class="list">
           <a href="https://github.com/alprNer">
             <span class="icon"></span>
-              <ion-icon name="logo-github"></ion-icon>
+            <ion-icon name="logo-github"></ion-icon>
             <span class="text">GitHub</span>
           </a>
         </li>
         <li class="list">
           <a href="https://www.linkedin.com/in/muhammetalperener/">
             <span class="icon"></span>
-              <ion-icon name="logo-linkedin"></ion-icon>
+            <ion-icon name="logo-linkedin"></ion-icon>
             <span class="text">Linked-in</span>
           </a>
         </li>
-        
       </ul>
       <div class="indicator"></div>
     </div>
-    
-    <script>
-        const list = document.querySelectorAll('.list');
-        function activeLink() {
-            list.forEach((item) =>
-            item.classList.remove('active'));
-            item.classList.add('active');
-        }
-        list.forEach((item) => 
-        item.addEventListener('click', activeLink)); 
-      
-list.forEach((item) => 
-item.addEventListener('click', () => activeLink(item))); // fonksiyon çağrısına item parametresini ekleyin
 
+    <script>
+      const list = document.querySelectorAll('.list');
+
+      function activeLink(clickedItem) {
+        list.forEach((item) => item.classList.remove('active'));
+        clickedItem.classList.add('active');
+      }
+
+      list.forEach((item) => {
+        item.addEventListener('click', () => activeLink(item));
+      });
     </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
